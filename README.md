@@ -5,4 +5,6 @@ Dataset
 1. [First Data](https://www.kaggle.com/datasets/nodoubttome/skin-cancer9-classesisic)
 2. [Second Data](https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000)
 
+Helper Function
+[skinnect.py](skinnect.py)
 
