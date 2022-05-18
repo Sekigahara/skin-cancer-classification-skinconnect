@@ -8,6 +8,7 @@ __pycache__/
 
 # Sekigahara Andro IGNORE Files
 raw-dataset/*
+dataset/*
 
 # Distribution / packaging
 .Python
