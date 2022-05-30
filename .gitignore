@@ -9,6 +9,8 @@ __pycache__/
 # Sekigahara Andro IGNORE Files
 raw-dataset/*
 dataset/*
+utils/demo_weight.h5
+history/*
 
 # Distribution / packaging
 .Python
