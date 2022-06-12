@@ -27,6 +27,7 @@ def detect():
     img = Image.open(f)
     img = img.convert("RGB")
     img = np.array(img)
+    img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
     img = cv2.resize(img, (160, 160))
     img = np.expand_dims(img, axis=0)
     img = img/.255
@@ -43,7 +44,10 @@ def detect():
         if labels_map[key]['label'] == prediction:
             disease_name = key
 
-    isDanger = True
+    if disease_name == 'dermatofibroma' or disease_name == 'melanocytic nevus':
+        isDanger = False
+    elif disease_name == 'melanoma' or disease_name == 'basal cell carcinoma' or disease_name == 'actinic keratosis' or disease_name == 'vascular lesions':
+        isDanger = True
 
     # Packing JSON
     response = {
@@ -59,7 +63,6 @@ def detect():
 
     serialized_dict = json.dumps(response, ensure_ascii=False).encode('utf8')
     return Response(serialized_dict, mimetype='application/json')
-    
     
 
 if __name__ == "__main__": 

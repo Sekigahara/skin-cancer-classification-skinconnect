@@ -9,6 +9,9 @@ __pycache__/
 # Sekigahara Andro IGNORE Files
 raw-dataset/*
 dataset/*
+dataset_augmented/*
+dataset_three_classes/*
+dataset_seven_classes/*
 utils/demo_weight.h5
 history/*
 
